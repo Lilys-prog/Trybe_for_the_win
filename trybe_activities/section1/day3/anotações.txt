@@ -1,0 +1,6 @@
+Não podemos esquecer que o Git é um sistema de versionamento de código, e o GitHub é uma plataforma que hospeda esse código. Para enviar ou acessar informações na plataforma do GitHub, são utilizados os comandos do Git.
+
+No decorrer de sua trajetória em desenvolvimento, você pode se deparar com a seguinte frase: “Faz um CR?”. O CR significa Code Review.
+
+Para criar ou clonar um repositório no GitHub e deixá-lo acessível no computador, não é necessário utilizar o comando git init.
+
