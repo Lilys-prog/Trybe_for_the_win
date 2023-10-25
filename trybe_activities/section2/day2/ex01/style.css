@@ -1,0 +1,21 @@
+h2 {
+  color: green;
+}
+
+body {
+  background-color: antiquewhite;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 30px;
+}
+
+.verde {
+  background-color:rgb(193, 232, 218);
+  width: 600px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#paragrafos {
+  width: 600px;
+  text-align: justify;
+}
