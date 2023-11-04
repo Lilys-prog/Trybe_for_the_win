@@ -1,0 +1,52 @@
+div:hover {
+  border: 8px solid grey;
+}
+
+h3 {
+  color: violet;
+  font-family: 'Courier New', Courier, monospace;    
+  text-shadow: 1px 1px 1px black;
+  top: 50%;
+}
+
+#red {
+  background-color: red;
+  width: 130px;
+  height: 100px;
+  text-align: center;
+  overflow-y: auto;
+  font-style: italic;  
+}
+
+#yellow {
+  background-color: yellow;
+  width: 130px;
+  height: 100px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+#blue {
+  background-color: blue;  
+  width: 150px;  
+  text-align: center;
+  padding: 30px 0;
+  font-style: italic;
+}
+
+#black {
+  background-color: black;  
+  width: 130px;
+  height: 100px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+#white {
+  background-color: white;
+  width: 130px;
+  height: 100px;
+  text-align: center;
+  overflow-y: auto;
+  font-style: italic;
+}
