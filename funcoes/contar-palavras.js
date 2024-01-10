@@ -5,3 +5,4 @@ const countWords = phrase => phrase.split(' ').length;
 // EXPLICANDO O FUNCIONAMENTO DA FUNÇÃO:
 // ela recebe uma string e o método .split() vai dividí-la sempre que encontrar umm espaço (' '), formando um array.
 // depois é só verificar quantos elementos tem esse array, o que vai dizer quantas palavras têm, já que os espaços as separam.
+// quando a função não tem parâmetros também se pode colocar _ no lugar dos parênteses
