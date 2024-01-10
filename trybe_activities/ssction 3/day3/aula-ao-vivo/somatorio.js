@@ -5,7 +5,7 @@ const sumArray = (numbersArray) => {
   let sum = 0; // escopo da função: pode ser usada pelo for e pelo return
 
   for (let index = 0; index < numbersArray.length; index += 1) {
-       sum += numbersArray[index]; // dentro do for pq deve passar por todo o array
+       sum += numbersArray[index]; // dentro do for pq deve percorrer todo o array dado
   }
 
   return sum; // pode retornar por estar no escopo da função
@@ -16,3 +16,4 @@ const array2 = [1, 1, 2, 3];
 
 console.log(sumArray(array1));
 console.log(sumArray(array2));
+
