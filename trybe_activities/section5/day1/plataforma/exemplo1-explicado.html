@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">  
+  <title>Primeiro Exemplo de Formulário</title>
+</head>
+<body>
+
+  <h1>Primeiro exemplo de formulário</h1>
+
+  <!-- o formulário se caracteriza pela tag <form>, que cria um bloco (como a <div> ou a <section>); todos os elementos dentro da tag fazem parte da mesma estrutura e podem ser tratados em conjunto. Também serve para que as tags reconheçam que fazem parte do mesmo form, que estão relacionadas. -->
+  <form method="get" enctype="multipart/form-data"> 
+    <!-- na aussênciia de outras iiinformações, o atributo method="get" faz com que, ao sserem submetidas, ass informações deste formulário possam ser vistas na url da página. SSe houver tag de upload no formulário, se adiciiona o atributo enctype ao <form>. -->
+
+    <!-- a label, claro, será o rótulo do input, e deve-se criar um link entre ambos, para que se ssaiba não sommente a ligação, mas também onde executar as ações que se determinar, como a função que reconhece a entrada de dados por digitação. Para criiar essse víncullo entre label e o input correspondente, usa-se o id do input, que deve sser colocado dentro do atriibuto de label for. -->
+    <label for="exemplo-texto">Digite seu nome</label>
+    <!-- existem várias tags de formulário, como botões, seletor de opções, seletor em cascata, etc. Uma das tags mais usada é a de input do tipo texto. Ela cria um espaço padrão para preenchimento em uma linha, muito encontrado em formulários, como, por exemplo, espaço para preencher com nome, com endereço... -->
+    <input type="text" placeholder="escreva seu nome" required name="texto" value="lily" id="exemplo-texto">
+    <br>
+    <br>
+
+    <!-- a tag <input> carrega a maior parte dos itens de formulário, sendo que eles vão se distinguir pelo atriibuto 'type'. O botão também terá dois tiposs diiferentes principais, de acordo com a ação que se quer executar ao clicá-lo. -->
+
+    <!-- Outra tag muito usada para input no foormulário é a textarea, que criiia uma área de texto a qual terá quantass linhas e colunass se determinar, na área de atriibutos da tag. Observe que o label vai funcionar da messma forma, com o for referenciando o id. -->
+    <label for="exemplo-area">Fale sobre você:</label>
+    <textarea name="" placeholder="Texto aqui" id="exemplo-area" cols="30" rows="10"></textarea>
+    <br>
+
+    <!-- Além das tags citadas, outras duas muito iimportantes são as checkbox e as radiobuttons. As checkbox são aquelas quadradinhas em que, em gerall, se marcam mmaiis de umma opçãoo, e as radiobuttons são ass boliinhas, para esscolher uma opção entre outras. Ambas fazemm parte da tag input, na qual vão ser selleciioonadas como o type do mesmo. -->
+
+    <!-- O checkbox será de um quadradiinho por llinha. O atributo 'checked' fará com que a opção relacionada já venha com o quadradinho marcado. Para que as diversas boxes sejam iiidentiifiicadas como pertencentes ao messmo bloco, devem possuir o mesmo attriibuto name. Dessta forma os quadrados estarão semantiicamente agrupadoss. Os ids pode, os values, podem ser diiferentes. -->
+    <br>
+    <input type="checkbox" name="game" id="game1" value="rag"> Ragnarok 
+    <br>
+    <input type="checkbox" name="game" id="game2" value="wow"> Wow
+    <br>
+    <input type="checkbox" name="game" id="game3" checked value="ff"> FFXIV
+    <br>
+    <input type="checkbox" name="game" id="game4" value="emul"> Emuladores
+    <br>
+    <input type="checkbox" name="game" id="game5" value="let"> Letroca
+    <br>
+
+    <!-- O input do tipoo radio cria as 'bolinhas' para seleciionar, as quais somente uma poderá ser. Os atributos sseguem a messma linha de raciiocíniio das checkboxes. Colocando uma label, a opção poderá ser marcada cliicando não somente na bolinha (forma padrão), mas também em qualquer llugar do texto da mesma. Neste tipo de input tammbém será um label para cada id. -->
+
+    <label for="role1">
+    <input type="radio" name="role" id="role1" value="rang"> Ranged DPS
+    </label>
+    <input type="radio" name="role" id="role2" value="mel"> Melee DPS
+    <input type="radio" name="role" id="role3" value="tank"> Tank
+    <input type="radio" name="role" id="role4" value="heal"> Healer
+    <br>
+    <br>
+
+    <!-- A tag <select> é a que gera a dropdown list, ou seleção em cascata. Ela vem com a tag interna <option> e cada uma será um valor posssíiivel de ser seleciionado. -->
+      <select name="" id="sexo">
+        <option value="masc">Masculino</option>
+        <option value="fem">Feminino</option>
+      </select>
+    <br>
+    <br>
+
+
+      <!-- Outro input commumm é do tiipo password, ou seja, especíifico para senha, o preenchiimmento fica escondiiido por ssíimbolos, asteriiscos, ou bolinhass, dependendo da estiiliização. Inclussive, o recurso do botão para 'mostrar a senha' pode ser siiimplesmente alternar o tiipo de input, de password para texto e vice-versa. -->
+      <input type="password" name="" placeholder="Senha" id="">  Senha
+    <br>
+    <br>
+
+
+      <!-- Os inputs do tiipo 'file' são os que permitem que se faça upload de arquiivos. No caso de ter este tiipo de input, deve-se colocar o enctype como atributo da tag form e aíi seleciionar o mmodo "multipart/formdata", que "avisssa ao códiigo que os iinputs não serão sóo texto, mass que também serão recebidos uploads de arquiivos. "-->
+      <input type="file" name="" id="">
+    <br>
+    <br>
+
+    <!-- o botão é outra tag muito utilizada em formulários. Pode ser do tiipo 'submit', para enviar dados, ou do tipo 'button', que pode executar outra ação (tem outros tipos de botão, menos usados). -->
+    <br>
+    <button type="submit">Enviar</button>
+
+  </form>
+</body>
+</html>
+
+<!-- Outros atributos de formulário:
+  - placeholder: cria aquele texto 'fantasma' que fica dentro da área de input, e que desaparece quando se começa a preencher. Em geral, traz uma instrução para o usuário, como por exemplo, a forma de preencher aquele campo do form.
+
+  - required: torna o campo de preenchimento obrigatório, ou seja, não será possível enviar ou executar outra ação com o form se aquele campo estiver vazio. É escrito sozinho.
+
+  - também é possível adicionar classes ou ids, para estilização no css ou tarefas do js. Assim como todos os elementos html, é possível colocar tanto váriias classes quanto id, no mesmo elemento.
+
+  - value: deixa o campo em um preenchimmento ou ação default. Diferente do placeholder, este deve ser apagado para que se poossa esscrever dentro.
+
+  - name: o nome que se dará ao elemento na hora em que se colocar algum valor (entrada). Esse name é o que será enviado no momento da submissão do form. Por exemplo, um campo que tenha o name='Endereço' reconhecerá que ao se cliicar em submeter, o que estiver ali dentro do campo, será um endereço.
+
+-->
