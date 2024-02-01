@@ -9,6 +9,9 @@ const players = [
 // Utilizando o método filter e array destructuring, crie uma função filterHighPlayers que retorna um novo array contendo apenas os jogadores com altura igual ou superior a 200 centímetros.
 
 const tallGuys = () => {
-  
+  return players.filter((player) => {
+    return player.height >= 200;
+  })
 }
+console.log(tallGuys());
 
