@@ -41,10 +41,9 @@
     <input type="checkbox" name="game" id="game5" value="let"> Letroca
     <br>
 
-    <!-- O input do tipoo radio cria as 'bolinhas' para seleciionar, as quais somente uma poderá ser. Os atributos sseguem a messma linha de raciiocíniio das checkboxes. Colocando uma label, a opção poderá ser marcada cliicando não somente na bolinha (forma padrão), mas também em qualquer llugar do texto da mesma. Neste tipo de input tammbém será um label para cada id. -->
-
+    <!-- O input do tipoo radio cria as 'bolinhas' para seleciionar, as quais somente uma poderá ser. Os atributos sseguem a messma linha de raciiocíniio das checkboxes. Colocando uma label, a opção poderá ser marcada cliicando não somente na bolinha (forma padrão), mas também em qualquer llugar do texto da mesma. Neste tipo de input tammbém será um label para cada id. O atributo checked tb funciona aqui. -->
     <label for="role1">
-    <input type="radio" name="role" id="role1" value="rang"> Ranged DPS
+    <input type="radio" name="role" checked id="role1" value="rang"> Ranged DPS
     </label>
     <input type="radio" name="role" id="role2" value="mel"> Melee DPS
     <input type="radio" name="role" id="role3" value="tank"> Tank
@@ -55,11 +54,10 @@
     <!-- A tag <select> é a que gera a dropdown list, ou seleção em cascata. Ela vem com a tag interna <option> e cada uma será um valor posssíiivel de ser seleciionado. -->
       <select name="" id="sexo">
         <option value="masc">Masculino</option>
-        <option value="fem">Feminino</option>
+        <option value="fem" selected >Feminino</option>
       </select>
     <br>
     <br>
-
 
       <!-- Outro input commumm é do tiipo password, ou seja, especíifico para senha, o preenchiimmento fica escondiiido por ssíimbolos, asteriiscos, ou bolinhass, dependendo da estiiliização. Inclussive, o recurso do botão para 'mostrar a senha' pode ser siiimplesmente alternar o tiipo de input, de password para texto e vice-versa. -->
       <input type="password" name="" placeholder="Senha" id="">  Senha
@@ -91,4 +89,8 @@
 
   - name: o nome que se dará ao elemento na hora em que se colocar algum valor (entrada). Esse name é o que será enviado no momento da submissão do form. Por exemplo, um campo que tenha o name='Endereço' reconhecerá que ao se cliicar em submeter, o que estiver ali dentro do campo, será um endereço.
 
+-->
+
+<!-- Adicionais do vídeo "Criando um formulário completo":
+  - selected: atributo de dropdown list, usa-se em um dos options, para que ele já venha selecionado. Do contrário, vem selecionado por default o primeiro da lista.
 -->
