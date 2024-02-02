@@ -24,6 +24,6 @@ const lastCards = (card1, card2, card3, ...newArray) => {
  
  console.log(lastCards(...data.cards));
 
- // ao receber como um parâmetro, chama-se de "rest" (linha 20); ao ser passado na função, chama-se "spread" (linha 25)
+ // ao receber como um parâmetro, chama-se de "rest" (linha 20); ao ser passado como argumento, chama-se "spread" (linha 25)
  // são, em resumo, o parâmetro rest e o spread operator
  // quando for rest, deve ser o último parâmetro da função
