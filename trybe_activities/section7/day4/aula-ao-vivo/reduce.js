@@ -2,6 +2,10 @@
 // pode ser um elemento, ou algo criado através de uma condição, etc
 // esse resultado pode ser um número, uma string, um objeto, um array, etc
 
+// apesar do retorno trazer um ÚNICO dado, não significa simplificação. Pode ser UM objeto complexo, cheio de chaves, arrays, outros objetos...
+// INCLUSIVE, quando se quer um objeto no retorno, o reduce é a hof to go, pq o mais próximo dessa complexidade é o map, mas ele retorna um array
+// INCLUSIVE, mesmo que o retorno deva ser um array, deve-se analisar se ele terá a mesma quantidade de elementos que o array original, pois essa é uma das características do map. Se o array final terá uma quantidade diferente, o reduce se torna novamente a ferramenta certa
+
 // .reduce(callbackFunction(acc, curr), initialValue)
 
 // os parâmetros OBRIGATÓRIOS da função callback serão:
@@ -16,3 +20,4 @@
 // DEFININDO VALOR INICIAL o acc vai recebê-lo e aí sim o curr vai começar no array[0]
 
 // dar uma boooooa lida nessa documentação
+
