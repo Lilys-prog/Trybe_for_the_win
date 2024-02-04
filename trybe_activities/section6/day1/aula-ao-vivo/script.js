@@ -1,3 +1,5 @@
+// aqui o js não está importando o data. O elo de ligação entre os dois arquivos é o index.html, que tem o link para ambos no fim do <body>
+
 const addHarryPotterMovie = () => {
   try {
     const year = document.querySelector('#movie').value;
@@ -21,6 +23,7 @@ const getHarryPotterMovie = (paramYear) => {
 
   for (let index = 0; index < harryPotterMovies.filmes.length; index += 1) {
     const objectMovie = harryPotterMovies.filmes[index];
+    // paramYear precisa ser transformado em número pq todo value que vem de input é string
     if (parseInt(paramYear) === objectMovie.ano_lancamento) {
       return objectMovie.nome;
     }
@@ -33,3 +36,4 @@ window.onload = () => {
   const button = document.querySelector('button');
   button.addEventListener('click', addHarryPotterMovie);
 }
+// ^ adiciona a função onload (assim que carrega a página) e coloca a função addHarryPotterMovie ao clicar no botão. Sem os parênteses de parâmetro pra que ela não seja chamada automaticamente, só quando clicar no botão
