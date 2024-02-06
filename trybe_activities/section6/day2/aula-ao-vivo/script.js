@@ -1,7 +1,6 @@
 const harryPotterMovies = require('./data');
 
 // função principal (a que vai de fato adicionar a resposta pro usuário)
-// 20min
 const addHarryPotterMovie = (year) => {
   try {
     return `No ano ${year} foi lançado o filme ${getHarryPotterMovie(year)}`;
