@@ -9,6 +9,8 @@ const { getHarryPotterMovie,
       // expect(ação).matcher(resultado esperado da ação);
   // })
 
+  // OBS: pode haver mais de um expect dentro do escopo de um it
+
 
   // exemplo:
   it('1 - verifies if the function addHarryPotterMovie exists', () => {
@@ -24,3 +26,21 @@ const { getHarryPotterMovie,
     it(etc)
     it(etc)
   });
+
+  // estrutura completa:
+  describe('', () => {
+    it('', () => {
+      expect().toBe();
+    });
+  })
+  // o toBe é somente um dos matchers possíveis, bem comum
+
+  // matcher útil para o throw: .toThrow('mensagem de erro'). Mas neste caso se monta uma função no expect. Exemplo:
+
+  expect(() => função('parâmetro')).toThrow('mensagem de erro')
+
+  // se não colocar nesse formato o .toThrow não passa no teste
+
+  // matchers para objeto (isso inclui array): .toEqual, .toStrictEqual(value)
+
+  // a documentação no site do jest associa os melhores matchers pros casos mais comuns
