@@ -1,15 +1,15 @@
 // Primeira parte - array de objetos com os detalhes dos produtos
 const promo = [
-  {product: 'bola de beach tennis', price: 29.99},
-  {product: 'mochila de trilha 20 litros', price: 120.99},
-  {product: 'capacete de ciclista', price: 180.59},
-  {product: 'toalha compacta de secagem', price: 39.99},
-  {product: 'kit 5 camisetas Dry Fit', price: 99.99},
-  {product: 'caneleiras de peso - 3kg (par)', price: 44.99},
-  {product: 'bola de ginástica e pilates', price: 149.59},
-  {product: 'óculos de natação', price: 18.99},
-  {product: 'capa protetora de prancha de surf', price: 89.59},
-  {product: 'bola de basquete', price: 39.99},
+  { product: 'bola de beach tennis', price: 29.99 },
+  { product: 'mochila de trilha 20 litros', price: 120.99 },
+  { product: 'capacete de ciclista', price: 180.59 },
+  { product: 'toalha compacta de secagem', price: 39.99 },
+  { product: 'kit 5 camisetas Dry Fit', price: 99.99 },
+  { product: 'caneleiras de peso - 3kg (par)', price: 44.99 },
+  { product: 'bola de ginástica e pilates', price: 149.59 },
+  { product: 'óculos de natação', price: 18.99 },
+  { product: 'capa protetora de prancha de surf', price: 89.59 },
+  { product: 'bola de basquete', price: 39.99 },
 ];
 
 // captura o botão e adiciona o evento de click com uma função que captura os inputs e aplica a função showPromo
@@ -26,7 +26,7 @@ button.addEventListener('click', () => {
 const showPromo = (name, number) => {
   const firstText = document.querySelector('#text-initial');
   const secondText = document.querySelector('#text-final');
- 
+
   try {
     checkName(name);
     checkNumber(parseInt(number));
@@ -36,15 +36,19 @@ const showPromo = (name, number) => {
     firstText.innerHTML = `Boas-vindas, ${name}!`;
     secondText.innerHTML = `A promoção do dia é: 
     ${productObject.product} no valor de R$ ${productObject.price}`;
-  } 
+  }
   catch (error) {
     secondText.innerHTML = error.message;
   }
-} 
+  finally { // serve para realizar uma ação que deve acontecer, independentemente de a função entrar no erro ou ter sucesso. Neste caso, o finally limpa os campos de input depois que o botão é clicado. Ele vai limpar os campos mesmo que seja lançado erro
+    document.querySelector('#name-id').value = '';
+    document.querySelector('#number-id').value = '';
+  }
+}
 
 const checkName = (name) => {
   let letters = /[aA-zZ]+/;    // regEx - regular expression
-  
+
   if (!name.match(letters)) {
     throw new Error('É necessário digitar um nome válido');
   }
@@ -52,9 +56,9 @@ const checkName = (name) => {
 
 // Segunda parte
 // recebe a variável number e traz como retorno a promoção na posição [index - 1]. Isso porque ao selecionar, por exemplo, a promoção 1, ela será equivalente ao elemento [0] do array, que é seu primeiro. Então o number precisa perder 1 para ser equivalente ao index
-                  // const checkNumber = (number) => {
-                  //   return promo[number - 1];
-                  // }
+// const checkNumber = (number) => {
+//   return promo[number - 1];
+// }
 
 // Segunda parte
 const checkNumber = (number) => {
