@@ -117,12 +117,31 @@ const findPersonByName = (name) => {
     // A função findPersonByPosition() recebe uma posição (do array) por parâmetro e retorna uma string com o nome e o e-mail da pessoa. Cliente: João da Silva. email: joao.silva@gmail.com.
     // Caso a função findPersonByPosition() não localize uma pessoa por posição, lance uma exceção com a mensagem 'Posição inválida, tente novamente'.
 const findPersonByPosition = (position) => {
-  // seu código aqui
+  let person;
+  for(let index = 0; index < clients.length; index += 1) {
+    if (position === index) {
+      person = clients[index];    
+    }
+  }
+  if (!person) {
+    throw new Error('Posição inválida, tente novamente');
+  }
+  return `Cliente: ${person.name}. Email: ${person.email}`;
 };
 
 
 // A função findPeopleByState recebe um estado por parâmetro e retorna um array contendo o nome das pessoas que moram naquele estado.
 // Caso a função findPeopleByState localize nenhuma pessoa no estado, lance uma exceção com a mensagem 'Ops, nenhuma pessoa mora nesse estado, tente outro'
 const findPeopleByState = (state) => {
-  // seu código aqui
+  let peopleFromStateArray = [];
+  for(let index = 0; index < clients.length; index += 1) {
+    if (state === clients[index].address.state) {
+      peopleFromStateArray.push(clients[index].name);
+    }    
+  }
+  if (peopleFromStateArray.length === 0) {
+    throw new Error('Ops, nenhuma pessoa mora nesse estado, tente outro');
+  }
+  return peopleFromStateArray;
 };
+console.log(findPeopleByState('SP'));
