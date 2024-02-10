@@ -22,4 +22,4 @@ addProperty(customer, 'linkedIn', 'Lily Silva');
 
 
 // Exibe o objeto transformado
-console.log(customer);
+console.log(Object.entries(customer));
