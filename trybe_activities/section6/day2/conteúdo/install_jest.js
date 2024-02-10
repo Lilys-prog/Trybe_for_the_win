@@ -7,3 +7,5 @@
 // NÃO ESQUECER que ao iniciar um projeto deve-se usar o comando
                     // npm init -y
 // para criar o arquivo package.json
+
+// fazer essas instalações antes de iniciar os arquivos js

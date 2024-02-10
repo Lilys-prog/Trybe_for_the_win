@@ -10,4 +10,4 @@
     // Uncovered Line: aponta, caso a cobertura de linhas não seja de 100%, onde ficam as linhas não cobertas (as linhas que começam o bloco não coberto)
 
 // ao rodar o comando de cobertura, é gerada uma nova pasta "coverage" dentro do projeto. Coloca-se ela dentro do .gitignore para não ser mandada ao repositório
-// nessa pasta existe uma subpasta icov-report e dentro dela um index.html. Executando o live server nesse arquivo obtém-se uma página mostrando uma tabela com os dados e é possível clicar no nome da função e ela mostrará os detalhes de cobertura no próprio código
+// nessa pasta existe uma subpasta lcov-report e dentro dela um index.html. Executando o live server nesse arquivo obtém-se uma página mostrando uma tabela com os dados e é possível clicar no nome da função e ela mostrará os detalhes de cobertura no próprio código
