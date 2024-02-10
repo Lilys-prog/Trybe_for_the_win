@@ -1,36 +1,41 @@
 const createItem = require('../src/createItem');
 
 describe('Tests the function createItem', () => {
-
-  it('', () => {
-    expect().toBe();
+  it('verifies if createItem is defined', () => {
+    expect(createItem).toBeDefined();
   });
 
-  it('', () => {
-    expect().toBe();
+  it('verifies if, when receiving the correct parameters, returns a valid item', () => {
+    expect(createItem('Banana', 'kg', 1.99, 20)).toEqual({
+      name: 'Banana',
+      quantity: 20,
+      unit: 'kg',
+      price: 1.99,
+    });
   });
 
-  it('', () => {
-    expect().toBe();
+  it('verifies if zero is the default quantity', () => {
+    expect(createItem('Banana', 'kg', 1.99)).toEqual({
+      name: 'Banana',
+      quantity: 0,
+      unit: 'kg',
+      price: 1.99,
+    });
   });
 
-  it('', () => {
-    expect().toBe();
+  it('throws an error when doesn`t receive parameters', () => {
+    expect(() => createItem()).toThrow();
   });
 
-  it('', () => {
-    expect().toBe();
+  it('throws an error when receives a name that`s not a string', () => {
+    expect(() => createItem(3, 'kg', 1.99, 20)).toThrow('O nome do item deve ser uma string');
   });
 
-});
+  it('throws an error if the parameter price is a negative number', () => {
+    expect(() => (createItem('Banana', 'kg', -1.99, 20))).toThrow('O preço do item deve ser maior que zero');
+  });
 
-const createItem = require('./createItem');
-
-describe('a função createItem', () => {
-  it.todo('cria um item válido');
-  it.todo('utiliza zero como quantidade padrão');
-  it.todo('Lança um erro quando não recebe parâmetros');
-  it.todo('Lança um erro se o nome do item não é uma string');
-  it.todo('Lança um erro se o preço é negativo');
-  it.todo('Lança um erro se o preço é zero');
+  it('throws an error if the parameter price is zero', () => {
+    expect(() => (createItem('Banana', 'kg', 0, 20))).toThrow('O preço do item deve ser maior que zero');
+  });
 });
