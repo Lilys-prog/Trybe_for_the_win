@@ -18,7 +18,7 @@
         <h4>Identificação:</h4>
         
         <label for="full-name">Nome Completo:</label>
-        <input type="text" name="full-name" id="full-name">
+        <input type="text" name="full-name" id="full-name" placeholder="Nome Completo">
         <br>
         <label for="adress">Endereço:</label>
         <input type="text" name="adress" id="adress">
@@ -28,6 +28,38 @@
 
       </section>
       <br>
+
+      <section class="food-size">
+        <h4>Tamanho da Marmita</h4>
+
+        <select name="size" id="size-id">
+          <option value="" disabled selected>Selecione o Tamanho</option>
+          <option value="food-500g">Marmitinha - 500g</option>
+          <option value="food-800g">Marmita - 800g</option>
+          <option value="food-1kg">Marmitão - 1Kg</option>
+          <option value="food-2kg">Marmitãozão - 2Kg</option>
+        </select>
+      </section>
+
+      <section>
+        <div>
+          <h4>Ovo frito?</h4>  
+          <label for="egg-id">Quantidade (R$ 2,00)</label>
+          <input type="number" name="egg" id="egg-id">
+        </div>
+
+        <div>
+          <h4>Onde vai o feijão?</h4>
+          
+          <input type="radio" name="bean" id="rice-bean-id" value="up">
+          <label for="rice-bean-id">Feijão por cima do arroz</label>
+          <br>
+          <input type="radio" name="bean" id="bean-rice-id" value="down">
+          <label for="bean-rice-id">Feijão por baixo do arroz</label>
+
+
+        </div>
+      </section>
 
       <button type="submit">Enviar</button>
       
