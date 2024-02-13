@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Ordem de Pedido - Exercício em Aula</title>
+</head>
+<body>
+<header>
+  <h1>Ordem de Pedido</h1>
+</header>
+
+  <main>
+    <form action="" method="get">
+
+      <section class="user">
+        <h4>Identificação:</h4>
+        
+        <label for="full-name">Nome Completo:</label>
+        <input type="text" name="full-name" id="full-name">
+        <br>
+        <label for="adress">Endereço:</label>
+        <input type="text" name="adress" id="adress">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+
+      </section>
+      <br>
+
+      <button type="submit">Enviar</button>
+      
+    </form>
+  </main>
+
+  <aside class="ticket">
+    <br><br><br>
+    == Restaurante Exemplo ==
+    <br>
+    = Coma enquanto há tempo =
+    <br><br>
+    Pedido nº <span>2323</span>
+
+    <div class="left">
+      <ol id="orderList"></ol>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
