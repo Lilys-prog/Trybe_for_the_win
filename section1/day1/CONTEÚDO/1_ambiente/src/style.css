@@ -1,0 +1,16 @@
+body {
+  background-color: #bbd0ff;
+}
+
+#btn-senha {
+  background-color: #679436;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+#senha {
+  color: #8f2d56;
+}

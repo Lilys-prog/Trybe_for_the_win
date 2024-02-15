@@ -1,9 +1,17 @@
 import { nanoid } from 'nanoid';
-
-// const passwordContainer = document.getElementById('senha')
-// console.log(passwordContainer);
+import copy from 'clipboard-copy'
+import './style.css'
+const passwordContainer = document.getElementById('senha');
+const btnSenha = document.getElementById('btn-senha');
 
 const passwordGenerator = () => {
-  console.log(nanoid());
+  passwordContainer.innerText = nanoid();  
+};
+
+const copyPassword = (event) => {
+  let copiedPassword = copy(event.target.innerText);
+  alert('Senha Copiada!'); 
 }
-passwordGenerator()
+
+btnSenha.addEventListener('click', passwordGenerator);
+passwordContainer.addEventListener('click', copyPassword);
