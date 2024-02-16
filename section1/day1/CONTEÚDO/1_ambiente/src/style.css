@@ -1,0 +1,22 @@
+body {
+  background-image: url(../img/pixels-laura-gigch-943922.jpg);
+}
+
+#title-id {
+  background-color: #3c1642;
+  color: #b2ff9e;
+  text-align: center;
+}
+
+#btn-senha {
+  background-color: #679436;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+#senha {
+  color: #affc41;
+}

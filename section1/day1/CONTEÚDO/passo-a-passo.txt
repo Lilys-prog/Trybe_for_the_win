@@ -1,0 +1,35 @@
+PRIMEIRO VÍDEO:
+1. Cria-se a pasta na qual se desenvolverá o projeto.
+
+2. criar o diretório src, o arquivo index.html (que deve estar na raiz, não dentro do src, mas no mesmo nível). O arquivo html é chamado de "entry point" da aplicação.
+
+3. Dentro do src cria-se o arquivo main.js e colocar o atributo type="module". Esse atributo informa à aplicação que se estará utilizando a importação e exportação através do ESM (ES Modules). A partir disso, a importação e exportação utilizam os comandos "import...export", diferentes do CommonJS que usa o "require...", etc.
+
+4. usar o npm init. Pode usar o -y automático ou responder as perguntas do npm pra personalizar o json. O package,json é o arquivo de configuração da aplicação.
+
+5. não esquecer de colocar em um repositório git, se não estiver (git init).
+
+-----------
+
+É possível utilizar bibliotecas externas nas aplicações, pedaços de código prontos para executar alguma finalidade (parecido com os frameworks de estilo)
+
+6. Para que o navegador consiga executar essas bibliotecas externas precisamos usar um BUNDLER DEV-SERVER. Na primeira parte do estudo frontEnd, estaremos usando o VITE.
+npx vite build <- executa o vite sem instalar e compila o arquivo build, que vai para a produção
+
+8. npm install vite
+
+9. colocar no script, pra rodar com o comando npm run dev
+
+10. npx vite --open 9
+cria um servidor que vai rodar o código com as bibliotecas, sem instalar
+
+---------
+
+pra colocar o eslint da trybe:
+
+- npm install @trybe/eslint-config-frontend
+
+- Crie o arquivo .eslintrc.json com o seguinte conteúdo:
+{
+  "extends" : "@trybe/eslint-config-frontend"
+}
