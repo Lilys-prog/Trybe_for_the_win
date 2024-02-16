@@ -10,7 +10,7 @@ const passwordGenerator = () => {
 };
 
 const copyPassword = (event) => {
-  let copiedPassword = copy(event.target.innerText);
+  copy(event.target.innerText);
   Swal.fire({
     title: "Good job!",
     text: "Senha copiada!",
