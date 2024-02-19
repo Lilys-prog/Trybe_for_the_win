@@ -15,10 +15,15 @@ btnCurrencySearch.addEventListener('click', (event) => {
       currencyList.innerHTML = ''; // esvazia a lista
       sectionTitle.innerHTML = `Valores referentes a 1 ${result.searchedCurrency}`;
 
-      const currencyListElements = document.createElement('li');
-      currencyListElements.className = 'list-group-item';
-      currencyListElements.innerHTML = newConvertedElement(result.conversionRatesArray)
-        .map((element) => element);
-      currencyList.appendChild(currencyListElements);
+      newConvertedElement(result.conversionRatesArray)
+        .map((element) => {
+          const listElements = document.createElement('li');
+          listElements.className = 'list-group list-group-horizontal';
+          // listElements.classList.add = 'list-group-horizontal';
+          listElements.innerHTML = element;
+          currencyList.append(listElements);
+
+          return currencyList;
+        });
     });
 });
