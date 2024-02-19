@@ -18,6 +18,17 @@ FAZER LOGO O NPM INIT PRA QUE O JSON VENHA COMPLETO (por algum motivo, se já ti
 
 5. não esquecer de colocar em um repositório git, se não estiver (git init).
 
+6. quando se tiver algum dado (como um token pra api), que não se queira versionar, que seja para ficar oculto, cria-se um arquivo chamado .env, que é nativo do vite. Nele se colocam esses dados e depois se lança no gitignore. Tudo que se coloca no .env está em uma "variável de ambiente". Como é nativo do vite, todos começam com esse prefixo:
+Sintaxe:
+VITE_TOKEN=''
+VITE_NAME=''
+...
+para acessar usa-se um import, que pode ser colocado em uma variável:
+const token = import.meta.env.VITE_TOKEN
+
+obs: mesmo que a função já contenha todo o tratamento dos dados e já tenha o return deles, ao chamá-la é preciso aplicar mais um then, e ele já trará a resolução.
+
+
 -----------
 
 É possível utilizar bibliotecas externas nas aplicações, pedaços de código prontos para executar alguma finalidade (parecido com os frameworks de estilo)
