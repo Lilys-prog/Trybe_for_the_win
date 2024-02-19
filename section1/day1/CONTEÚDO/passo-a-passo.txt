@@ -1,13 +1,33 @@
+JÁ CRIA UMA CARRADA DO QUE PRECISA:
+npm create vite@latest
+- nome do projeto
+- vanilla
+
+
 PRIMEIRO VÍDEO:
 1. Cria-se a pasta na qual se desenvolverá o projeto.
 
 2. criar o diretório src, o arquivo index.html (que deve estar na raiz, não dentro do src, mas no mesmo nível). O arquivo html é chamado de "entry point" da aplicação.
 
-3. Dentro do src cria-se o arquivo main.js e colocar o atributo type="module". Esse atributo informa à aplicação que se estará utilizando a importação e exportação através do ESM (ES Modules). A partir disso, a importação e exportação utilizam os comandos "import...export", diferentes do CommonJS que usa o "require...", etc.
-
+FAZER LOGO O NPM INIT PRA QUE O JSON VENHA COMPLETO (por algum motivo, se já tiver o js ele só vem com a chave description)
 4. usar o npm init. Pode usar o -y automático ou responder as perguntas do npm pra personalizar o json. O package,json é o arquivo de configuração da aplicação.
 
+3. Dentro do src cria-se o arquivo main.js e colocar o atributo type="module". Esse atributo informa à aplicação que se estará utilizando a importação e exportação através do ESM (ES Modules). A partir disso, a importação e exportação utilizam os comandos "import...export", diferentes do CommonJS que usa o "require...", etc.
+
+4.5. bom criar uma pasta de utilitários pra colocar as funções de forma separada e só importar no main.js
+
 5. não esquecer de colocar em um repositório git, se não estiver (git init).
+
+6. quando se tiver algum dado (como um token pra api), que não se queira versionar, que seja para ficar oculto, cria-se um arquivo chamado .env, que é nativo do vite. Nele se colocam esses dados e depois se lança no gitignore. Tudo que se coloca no .env está em uma "variável de ambiente". Como é nativo do vite, todos começam com esse prefixo:
+Sintaxe:
+VITE_TOKEN=''
+VITE_NAME=''
+...
+para acessar usa-se um import, que pode ser colocado em uma variável:
+const token = import.meta.env.VITE_TOKEN
+
+obs: mesmo que a função já contenha todo o tratamento dos dados e já tenha o return deles, ao chamá-la é preciso aplicar mais um then, e ele já trará a resolução.
+
 
 -----------
 
@@ -27,7 +47,7 @@ cria um servidor que vai rodar o código com as bibliotecas, sem instalar
 
 pra colocar o eslint da trybe:
 
-- npm install @trybe/eslint-config-frontend
+- npm install @trybe/eslint-config-frontend -D
 
 - Crie o arquivo .eslintrc.json com o seguinte conteúdo:
 {
