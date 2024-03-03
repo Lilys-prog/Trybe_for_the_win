@@ -1,0 +1,11 @@
+@Eliane Silva - Turma 39
+ Mas o que você guardou no cityInfo da linha 120 na verdade é um array de objetos, ou seja, pode usar um método de array para executar o createCityElement pra cada um deles.
+Por exemplo,
+
+cityInfo.forEach((city) => {
+  const cityElement = createCityElement(city);
+})
+
+Dessa forma, estaria usando o array cityInfo para usar o método forEach e a cada objeto construir um elemento pra ele. Ainda faltaria algumas etapas para colocar na tela, mas seria um início.
+
+03790.00094 99107.900005 00061.847711 1 00000000000000

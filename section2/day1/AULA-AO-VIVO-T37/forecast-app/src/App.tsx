@@ -1,11 +1,13 @@
 import './App.css'
 import CardComponent from './components/CardComponent';
+import Header from './components/Header';
 
 const forecast = () => {
   return (
     <>
       <div>
-        <CardComponent />        
+        <CardComponent /> 
+        <Header />       
       </div>      
     </>
   )
