@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import CardComponent from './components/CardComponent';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const forecast = () => {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <CardComponent />        
+      </div>      
     </>
   )
-}
+  }
 
-export default App
+export default forecast;
+
+
+// TEORIA:
+// como o main referencia o app, o app é o componente principal
+// exporta o nome da função, não do arquivo
+// visualmente pode se ver que o app tem a função
+// dessa forma, temos o index.html > main.tsx > app.tsx
+// é a partir do app que as coisas são criadas, é o começo de tudo
+
+// o que define um componente?
+  // visualmente pode ser visto como uma função que retorna um html
+  // mas o componente é o pedacinho de tela que se quer criar
+  // e, claro, o css vai ser exportado da mesma forma, como um módulo no tsx(js)
+  // tem dois arquivos de css, o index.css e o app.css
