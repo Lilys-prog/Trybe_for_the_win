@@ -1,0 +1,9 @@
+Não existe mais o comando de create react-app, usa-se o do vite. Agora também se trabalha com o Typescript e não com o js. O Typescript é basicamente o js, mas com um controle maior de tipos. As variáveis serão tipadas, number, string, boolean, etc.
+
+Excluir as mil regras de lint que vem no package.json.
+
+Clicar com o botão direito no arquivo e selecionar configurar como. Aí marcar configuração padrão e depois eslint.
+
+Pode marcar o saewithout format, que facilita enquanto coda.
+
+O arquivo vite.config.ts será mexido para testes.
